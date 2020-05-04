@@ -1,0 +1,25 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th class="info">Price</th>
+            <th class="info">Weight</th>
+            <th class="info">Units in Stock</th>
+            <th></th>
+        </tr>
+    </thead>
+
+    <tbody>
+        <tr *ngFor="let tempProduct of products">
+            <td class="align-middle">
+                <img src="{{ tempProduct.imageUrl }}" width="100px"/>
+            </td>
+            <td class="align-middle">{{ tempProduct.name }}</td>
+            <td class="info align-middle">{{ tempProduct.unitPrice }}:-</td>
+            <td class="info align-middle">{{ tempProduct.unitWeight }}g</td>
+            <td class="info align-middle">{{ tempProduct.unitsInStock }}st</td>
+            <td class="info align-middle"><a href="#" style="color: #205b8d;">Add to cart</a></td>
+        </tr>
+    </tbody>
+</table>
