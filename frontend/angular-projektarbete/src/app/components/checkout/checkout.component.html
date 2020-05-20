@@ -1,0 +1,154 @@
+<div class="checkout-content">
+    <div class="content-fluid"> 
+        <form  [formGroup]="checkoutFormGroup" (ngSubmit)="onSubmit()">
+
+            <div formGroupName="customer" class="form-area">
+                <h3>Customer</h3>
+                
+                <div class="row">
+                    <div class="col-sm-2"><label>First Name</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="firstName" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Last Name</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="lastName" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Email</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="email" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div formGroupName="shippingAddress" class="form-area">
+                <h3>Shipping Address</h3>
+                
+                <div class="row">
+                    <div class="col-sm-2"><label>Country</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="country" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>City</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="city" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Street</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="street" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Zip Code</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="zipCode" type="text">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div formGroupName="creditCard" class="form-area">
+                <h3>Credit Card</h3>
+                
+                <div class="row">
+                    <div class="col-sm-2"><label>Card Type</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <div class="input-space">
+                                <input formControlName="cardType" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Name on Card</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="nameOnCard" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Card Number</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="cardNumber" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Security Code</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <input formControlName="securityCode" type="text">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Expiration Month</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <div class="input-space">
+                                <input formControlName="expirationMonth" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm-2"><label>Expiration Year</label></div>
+                    <div class="col-sm-9">
+                        <div class="input-space">
+                            <div class="input-space">
+                                <input formControlName="expirationYear" type="text">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="form-area">
+                <h3>Review Your Order</h3>
+                <p>Total Quantity: {{ totalQuantity }}st</p>
+                <p>Total Price: {{ totalPrice }}:-</p>
+            </div>
+
+            <div class="text-center">
+                <button type="submit" class="btn btn-primary btn-sm">Purchase</button>
+            </div>
+        </form>
+    </div>
+</div>

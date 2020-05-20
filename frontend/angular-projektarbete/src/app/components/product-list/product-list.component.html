@@ -1,25 +1,24 @@
-<table class="table">
-    <thead class="thead-dark">
-        <tr>
-            <th></th>
-            <th>Name</th>
-            <th class="info">Price</th>
-            <th class="info">Weight</th>
-            <th class="info">Units in Stock</th>
-            <th></th>
-        </tr>
-    </thead>
-
-    <tbody>
-        <tr *ngFor="let tempProduct of products">
-            <td class="align-middle">
-                <img src="{{ tempProduct.imageUrl }}" width="100px"/>
-            </td>
-            <td class="align-middle">{{ tempProduct.name }}</td>
-            <td class="info align-middle">{{ tempProduct.unitPrice }}:-</td>
-            <td class="info align-middle">{{ tempProduct.unitWeight }}g</td>
-            <td class="info align-middle">{{ tempProduct.unitsInStock }}st</td>
-            <td class="info align-middle"><a href="#" style="color: #205b8d;">Add to cart</a></td>
-        </tr>
-    </tbody>
-</table>
+<div class="main-content">
+    <div class="container-fluid">
+        <div class="row">
+            <div *ngFor="let tempProduct of products" class="col-sm-4 col-md-3">
+                <div class="product-card">
+                    <a routerLink="/products/{{ tempProduct.id }}">
+                        <img class="col-sm-12" src="{{ tempProduct.imageUrl }}"/>
+                    </a>
+                    <div class="product-card-info">
+                        <a routerLink="/products/{{ tempProduct.id }}">
+                            <h6>{{ tempProduct.name }}</h6>
+                        </a>
+                        <p>{{ tempProduct.unitWeight }}g</p>
+                        <p class="price">{{ tempProduct.unitPrice }}:-</p>
+                        <button (click)="addToCart(tempProduct)" class="btn btn-primary btn-sm">Add to cart</button>
+                    </div>
+                </div>
+            </div>
+            <div *ngIf="products?.length == 0" class="alert alert-warning col-md-12" role="alert">
+                No products found.
+            </div>
+        </div>
+    </div>
+</div>

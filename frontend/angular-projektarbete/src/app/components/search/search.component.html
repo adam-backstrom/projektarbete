@@ -1,0 +1,13 @@
+<div class="search-content">
+    <a routerLink="/products">
+        <i class="fas fa-home" aria-hidden="true"></i>
+    </a>
+    <input #myInput type="text"
+           placeholder="Search for products ..."
+           class="search-input"
+           (keyup.enter)="doSearch(myInput.value)" />
+    <button (click)="doSearch(myInput.value)"
+            class="search-btn">
+        Search
+    </button>
+</div>

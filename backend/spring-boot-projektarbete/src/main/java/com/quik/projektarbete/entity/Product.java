@@ -1,12 +1,12 @@
 package com.quik.projektarbete.entity;
 
 import lombok.Data;
-import org.hibernate.annotations.CreationTimestamp;
-import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.math.BigDecimal;
-import java.util.Date;
+
+// Lomboks annotation @Data används för att skapa upp entiteten, denna sätter getters och setters för egenskaperna.
+// Tabellen och egenskaperna mappas mot databasen med @Table och @Column där "name" är namnet på fälten i databasen.
 
 @Entity
 @Table(name="product")
@@ -30,21 +30,6 @@ public class Product {
     @Column(name = "unit_weight")
     private BigDecimal unitWeight;
 
-    @Column(name = "units_in_stock")
-    private int unitsInStock;
-
-    @Column(name = "date_created")
-    @CreationTimestamp
-    private Date dateCreated;
-
-    @Column(name = "last_updated")
-    @UpdateTimestamp
-    private Date lastUpdated;
-
     @Column(name = "image_url")
     private String imageUrl;
-
-    @ManyToOne
-    @JoinColumn(name = "category_id", nullable = false)
-    private ProductCategory category;
 }

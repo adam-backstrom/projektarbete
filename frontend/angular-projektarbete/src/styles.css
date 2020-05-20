@@ -1,83 +1,191 @@
-.page-content{
-    background:#e5e5e5;
-    padding-left:25px;
-    padding-right:25px;
-    padding-top:85px;
-    overflow:hidden;
-    background:#e5e5e5;
+.page-content {
+    background: #e5e5e5;
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 110px;
+    height: 100vh;
+    overflow: auto;
 }
 
-.header{
-    background:#0de41f;
-    position:fixed;
-    top:0;
-    right:0;
-    left:0;
-    height:75px;
+.header {
+    background: #0de41f;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 75px;
+    z-index: 1;
 }
 
-.header-content{
-    position:relative;
-    top:50%;
-    transform:translateY(-50%);
-    padding-left:100px;
-    padding-right:50px;
+.header-content {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 50px;
+    padding-right: 50px;
 }
 
-.header-wrap{
-    display:flex;
-    justify-content:space-between;
+.main-content {
+    margin:0 auto;
 }
 
-.search-input{
-    border:1px solid #e5e5e5;
-    color:#666;
-    line-height:40px;
-    border-radius:20px;
-    padding-left:20px;
-    margin-right:15px
+.product-card {
+    margin-bottom: 30px;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    background-color: rgb(194, 189, 189);
 }
 
-.search-btn{
-    position:relative;
-    background:#205b8d;
-    border:1px solid #205b8d;
-    color:#fff;
-    line-height:40px;
-    border-radius:20px;
-    width:80px;
+.product-card-info {
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
 }
 
-.search-btn:hover{
-    background:#05143f
+.product-card-info .price {
+    height: 70px;
+    width: 70px;
+    border-radius: 50%;
+    background-color: red;
+    line-height: 70px;
+    position: relative;
+    bottom: 60px;
+    position: relative;
+    float: right;
+    text-align: center;
 }
 
-.search-btn:focus,.search-input:focus{
-    outline:0;
+.product-card-info .add-to-cart {
+    padding: 8px 20px 10px 20px;
+    text-align: center;
+    background: rgb(37, 37, 100);
+    color: white;
 }
 
-.cart-content i{
-    font-size:22px;
-    margin-top:10px;
-    margin-left:15px;
-    color:#205b8d;
+.header-wrap {
+    display: flex;
+    justify-content: space-between;
+    line-height: 0;
 }
 
-.total{
-    background:#205b8d;
-    color:#fff;
-    float:left;
-    line-height:40px;
-    border-radius:20px;
-    padding-left:15px;
+.search-content a {
+    position: relative;
+    top: 5px;
+    right: 25px;
+    font-size: 35px;
+    color: #205b8d;
 }
 
-.total span{
-    background:#fff;
-    color:#000;
-    display:inline-block;
-    border-top-right-radius:20px;
-    border-bottom-right-radius:20px;
-    padding:0 12px;
-    margin-left:10px;
+.search-input {
+    border: 1px solid #e5e5e5;
+    color: #666;
+    line-height: 40px;
+    border-radius: 20px;
+    padding-left: 20px;
+    margin-right: 15px
+}
+
+.search-btn {
+    position: relative;
+    background: #205b8d;
+    border: 1px solid #205b8d;
+    color: #fff;
+    line-height: 40px;
+    border-radius: 20px;
+    width: 80px;
+}
+
+.search-btn:hover {
+    background: #05143f
+}
+
+.search-btn:focus,.search-input:focus {
+    outline: 0;
+}
+
+.cart-content i {
+    position: relative;
+    top: 8px;
+    left: 10px;
+    font-size: 28px;
+    color: #205b8d;
+}
+
+.total {
+    background: #205b8d;
+    color: #fff;
+    float: left;
+    line-height: 46px;
+    border-radius: 20px;
+    padding-left: 15px;
+}
+
+.total span {
+    background: #fff;
+    color: #000;
+    display: inline-block;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0 12px;
+    margin-left: 10px;
+}
+
+/* CART DETAILS */
+
+.table {
+    
+    border: 1px solid #ccc;
+    background: #fff;
+    
+}
+
+
+.items select {
+    width: 100px;
+    height: 40px;
+    border-radius: 40px;
+    padding-left: 15px;
+    margin-bottom: 10px;
+    outline: 0;
+    margin-left: 5px;
+}
+
+.checkout-content {
+    padding: 2% 20% 10% 5%;
+}
+
+.form-area {
+    background: #e5e5e5;
+    position: relative;
+    margin-bottom: 45px;
+    padding: 50px 0 20px 20px;
+    border: 4px solid rgb(75, 72, 72)
+}
+.form-area h3 {
+    position: absolute;
+    top: -32px;
+    left: 13px;
+    background: #e5e5e5;
+    padding: 10px 20px;
+    font-weight: bold;
+}
+.input-space {
+    margin-bottom: 20px
+}
+
+.input-space input {
+    width: 100%;
+    height: 40px;
+    border-radius: 30px;
+    outline: 0;
+    padding: 10px;
+    border: 1px solid #ccc
+}
+
+select {
+    color: #828482
+}
+
+.receipt-message {
+    text-align: center;
 }
